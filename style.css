@@ -1,0 +1,159 @@
+/* début nav-bar */
+
+nav ul {
+    padding:0px;
+    margin:0px;
+    list-style-type: none;
+    background-color: rgb(143, 19, 19);
+    text-align: center;
+}
+  
+nav li{
+    display: inline-block;
+    width:100px;
+    height:70px;
+    margin:0px;
+    padding:0px;
+    border-right:1px solid #cccccc;
+}
+
+nav li a{
+    display:inline-block;
+    text-decoration: none;
+    color:#000000;
+}
+
+/* fin nav-bar */
+/* début slider */
+
+#slideshow {
+	position: relative;
+	width: 1440px;
+	height: 700px;
+	padding: 15px;
+	margin: 0 auto 2em;
+	border: 1px solid #ddd;
+	background: #FFF;
+	/* CSS3 effects */
+	background: linear-gradient(#FFF, #FFF 20%, #EEE 80%, #DDD);
+	border-radius: 2px 2px 2px 2px;
+	box-shadow: 0 0 3px rgba(0,0,0, 0.2);
+}
+
+/* gestion des dimensions et débordement du conteneur */
+#slideshow .container {
+	position:absolute;
+	width: 1440px;
+	height: 700px;
+	overflow: hidden;
+}
+	
+/* le conteneur de slides en largeur il fait 100% x le nombre de slides */
+#slideshow .slider {
+	position: absolute;
+	left:0; top:0;
+	width: 500%;
+	height: 310px;
+}
+
+/* annulation des marges sur figure */
+#slideshow figure {
+	position:relative;
+	display:inline-block;
+	padding:0; margin:0;
+}
+
+/* styles de nos légendes */
+#slideshow figcaption {
+	position:absolute;
+	left:0; right:0; bottom: 300px;
+	padding: 20px;
+	margin:0;
+	border-top: 1px solid rgb(225,225,225);
+	text-align:center;
+	letter-spacing: 0.07em;
+	word-spacing: 0.07em;
+	font-family: Georgia, Times, serif;
+	background: #fff;
+	background: rgba(197, 173, 173, 0.7);
+	color: rgb(43, 38, 38);
+	text-shadow: -1px -1px 0 rgba(255,255,255,0.3);
+}
+
+/* fonction d'animation, n'oubliez pas de prefixer ! */
+@keyframes slider {
+	0% {left: 0%;}
+    20% {left: 0%;}
+    25% {left: -100%;}
+    45% {left: -100%;}
+    50% {left: -200%;}
+    70% {left: -200%;}
+    75% {left: -300%;}
+    95% {left: -300%;}
+    100% {left: -400%;}
+}
+
+/* complétez le sélecteur avec la propriété animation */
+#slideshow .slider {
+	animation: slider 20s infinite;
+}
+
+
+/* fin slider */
+/* début présentation */
+
+.present {
+    float:left;
+}
+
+
+/* fin presentation */
+/*    parralax      */
+
+.parallaxe{
+    background-image:url(img/deadpool.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 500px;
+    background-size:cover; 
+}  
+
+.princip_para{
+    width:100px;
+    height:100px;
+}
+
+.second2_para{
+    width:100px;
+    height:100px;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+/*      galerie photo        */
+
+#gallery {
+	text-align: center;
+	width: 610px;
+	margin: 70px auto;
+}
+
+#gallery img {
+	width: 300px;
+	z-index: 1; 
+	margin: 0; 
+	position: relative; 
+}
+
+  
+/*      footer    */
+/* Style the footer */
+footer {
+	background-color: #777;
+	padding: 10px;
+	text-align: center;
+	color: white;
+  }
+}
+
